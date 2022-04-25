@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddFloorPlansTable extends Migration
+class CreateRoomPackagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class AddFloorPlansTable extends Migration
      */
     public function up()
     {
-        Schema::create('floor_plans', function (Blueprint $table) {
+        Schema::create('room_packages', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
-            $table->integer('no_of_rooms');
-            $table->integer('start_room_no');
+            $table->enum('days', ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']);
+            $table->integer('min_nights');
+            $table->integer('max_nights');
         });
     }
 
@@ -28,6 +29,6 @@ class AddFloorPlansTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('room_packages');
     }
 }

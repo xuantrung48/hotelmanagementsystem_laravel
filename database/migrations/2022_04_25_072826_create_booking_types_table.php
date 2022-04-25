@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddBookingSourcesTable extends Migration
+class CreateBookingTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class AddBookingSourcesTable extends Migration
      */
     public function up()
     {
-        Schema::create('booking_sources', function (Blueprint $table) {
+        Schema::create('booking_types', function (Blueprint $table) {
             $table->id();
-            $table->integer('booking_type_id');
             $table->string('name')->unique();
-            $table->integer('commission_rate');
         });
     }
 
@@ -28,6 +26,6 @@ class AddBookingSourcesTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('booking_types');
     }
 }
