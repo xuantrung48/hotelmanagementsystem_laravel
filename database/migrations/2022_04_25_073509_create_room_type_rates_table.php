@@ -15,8 +15,8 @@ class CreateRoomTypeRatesTable extends Migration
     {
         Schema::create('room_type_rates', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('room_type_id');
-            $table->bigInteger('room_package_id');
+            $table->foreignId('room_type_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('room_package_id')->constrained()->cascadeOnDelete();
             $table->date('from_date');
             $table->date('to_date');
             $table->decimal('price', 12, 2);

@@ -15,7 +15,7 @@ class CreateBookingSourcesTable extends Migration
     {
         Schema::create('booking_sources', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('booking_type_id');
+            $table->foreignId('booking_type_id')->constrained()->cascadeOnDelete();
             $table->string('name')->unique();
             $table->integer('commission_rate');
         });

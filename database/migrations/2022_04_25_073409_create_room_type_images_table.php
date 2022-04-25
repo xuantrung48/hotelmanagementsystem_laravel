@@ -17,7 +17,7 @@ class CreateRoomTypeImagesTable extends Migration
             $table->id();
             $table->bigInteger('order_by_id');
             $table->string('image_path');
-            $table->bigInteger('room_type_id');
+            $table->foreignId('room_type_id')->constrained()->cascadeOnDelete();
         });
     }
 

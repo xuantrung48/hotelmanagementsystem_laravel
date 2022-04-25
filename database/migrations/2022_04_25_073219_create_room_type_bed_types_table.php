@@ -15,8 +15,8 @@ class CreateRoomTypeBedTypesTable extends Migration
     {
         Schema::create('room_type_bed_types', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('room_type_id');
-            $table->bigInteger('bed_type_id');
+            $table->foreignId('room_type_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('bed_type_id')->constrained()->cascadeOnDelete();
         });
     }
 
