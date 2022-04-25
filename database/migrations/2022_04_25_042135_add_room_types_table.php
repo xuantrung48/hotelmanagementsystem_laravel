@@ -21,7 +21,6 @@ class AddRoomTypesTable extends Migration
             $table->integer('max_people');
             $table->integer('adult_charge');
             $table->integer('kids_charge');
-            $table->decimal('rate', 12, 2);
         });
     }
 
