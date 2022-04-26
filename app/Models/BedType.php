@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class BedType extends Model
 {
-    //
+    use HasFactory;
+
+    public $timestamps = false;
 }

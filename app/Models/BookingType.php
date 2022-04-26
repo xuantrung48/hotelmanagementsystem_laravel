@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class BookingType extends Model
 {
     use HasFactory;
+
+    public $timestamps = false;
 }
