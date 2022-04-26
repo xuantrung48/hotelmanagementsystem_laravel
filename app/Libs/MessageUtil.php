@@ -1,6 +1,6 @@
 <?php
 
-namespace libs;
+namespace App\Libs;
 
 use App\Exceptions\ParameterErrorException;
 use Throwable;

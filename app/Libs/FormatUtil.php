@@ -1,8 +1,8 @@
 <?php
 
-namespace libs;
+namespace App\Libs;
 
-use libs\MessageUtil;
+use App\Libs\MessageUtil;
 
 class FormatUtil
 {

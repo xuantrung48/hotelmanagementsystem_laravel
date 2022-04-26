@@ -1,9 +1,9 @@
 <?php
 
-namespace libs;
+namespace App\Libs;
 
 use Illuminate\Support\Facades\DB;
-use libs\MessageUtil;
+use App\Libs\MessageUtil;
 use Exception;
 use Illuminate\Support\Facades\Log;
 
@@ -29,23 +29,35 @@ class DBaccessUtil
             if (!is_array($result) || !isset($result['status'])) {
                 DB::rollBack();
                 Log::debug('process() method that instantiate from ' . __CLASS__ . ' must be return array with format [\'status\' => boolean, \'error\'=>\'some error message\'] in file ' . $callerFile . ' at line ' . $errorLineNo . ' that instantiate the class ' . get_called_class());
-                return false;
+                return [
+                    'status' => false,
+                    'message' => 'process() method that instantiate from ' . __CLASS__ . ' must be return array with format [\'status\' => boolean, \'error\'=>\'some error message\'] in file ' . $callerFile . ' at line ' . $errorLineNo . ' that instantiate the class ' . get_called_class()
+                ];
             }
             // if result['status'] is true, then commit
             if ($result['status']) {
                 DB::commit();
-                return true;
+                return [
+                    'status' => true,
+                    'message' => ''
+                ];
             } else {
                 // if result is false, some process error occur
                 DB::rollBack();
                 // writing log for strange conditions
                 Log::debug('Process Error: ' . $result['error'] . ' in file ' . $callerFile . ' at line ' . $errorLineNo . ' that instantiate the class ' . get_called_class());
-                return false;
+                return [
+                    'status' => false,
+                    'message' => $result['error']
+                ];
             }
         } catch (Exception $e) {
             DB::rollBack();
             Log::debug($e->getMessage() . ' in file ' . $callerFile . ' at line ' . $errorLineNo . ' that instantiate the class ' . get_called_class());
-            return false;
+            return [
+                'status' => false,
+                'message' => $e->getMessage()
+            ];
         }
     }
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace libs;
+namespace App\Libs;
 
-use libs\CheckUtil;
-use libs\MessageUtil;
+use App\Libs\CheckUtil;
+use App\Libs\MessageUtil;
 
 class CalculatUtil
 {

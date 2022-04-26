@@ -1,10 +1,10 @@
 <?php
 
-namespace libs;
+namespace App\Libs;
 
 use DateTimeImmutable;
 use Exception;
-use libs\MessageUtil;
+use App\Libs\MessageUtil;
 
 
 class CheckUtil
