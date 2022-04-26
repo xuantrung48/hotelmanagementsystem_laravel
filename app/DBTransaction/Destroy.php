@@ -28,9 +28,9 @@ class Destroy extends DBaccessUtil
     {
         try {
             $this->model::whereId($this->id)->delete();
-            return ['status' => true, 'error' => ''];
+            return ['status' => 'OK', 'error' => ''];
         } catch (Exception $e) {
-            return ['status' => false, 'error' => $e->getMessage()];
+            return ['status' => 'NG', 'error' => $e->getMessage()];
         }
     }
 }

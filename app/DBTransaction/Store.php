@@ -4,6 +4,7 @@ namespace App\DBTransaction;
 
 use App\Libs\DBaccessUtil;
 use Exception;
+use Illuminate\Support\Facades\DB;
 
 /**
  * Store database transaction
@@ -27,9 +28,9 @@ class Store extends DBaccessUtil
     {
         try {
             $this->model::insert($this->data);
-            return ['status' => true, 'error' => ''];
+            return ['status' => 'OK', 'message' => 'Successfully saved'];
         } catch (Exception $e) {
-            return ['status' => false, 'error' => $e->getMessage()];
+            return ['status' => 'NG', 'message' => $e->getMessage()];
         }
     }
 }
