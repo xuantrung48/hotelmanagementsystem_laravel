@@ -31,10 +31,10 @@ class RoomPackageController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\RoomPackage  $roomPackage
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(RoomPackage $roomPackage)
+    public function show($id)
     {
         //
     }
@@ -43,10 +43,10 @@ class RoomPackageController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\RoomPackage  $roomPackage
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, RoomPackage $roomPackage)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -54,10 +54,10 @@ class RoomPackageController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\RoomPackage  $roomPackage
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(RoomPackage $roomPackage)
+    public function destroy($id)
     {
         //
     }

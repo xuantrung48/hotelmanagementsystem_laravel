@@ -31,10 +31,10 @@ class BookingTypeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\BookingType  $bookingType
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(BookingType $bookingType)
+    public function show($id)
     {
         //
     }
@@ -43,10 +43,10 @@ class BookingTypeController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\BookingType  $bookingType
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, BookingType $bookingType)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -54,10 +54,10 @@ class BookingTypeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\BookingType  $bookingType
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(BookingType $bookingType)
+    public function destroy($id)
     {
         //
     }

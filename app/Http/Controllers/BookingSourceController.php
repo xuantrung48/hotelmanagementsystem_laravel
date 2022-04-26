@@ -31,10 +31,10 @@ class BookingSourceController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\BookingSource  $bookingSource
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(BookingSource $bookingSource)
+    public function show($id)
     {
         //
     }
@@ -43,10 +43,10 @@ class BookingSourceController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\BookingSource  $bookingSource
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, BookingSource $bookingSource)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -54,10 +54,10 @@ class BookingSourceController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\BookingSource  $bookingSource
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(BookingSource $bookingSource)
+    public function destroy($id)
     {
         //
     }

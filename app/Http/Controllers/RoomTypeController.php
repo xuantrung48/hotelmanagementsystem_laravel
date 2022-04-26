@@ -31,10 +31,10 @@ class RoomTypeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\RoomType  $roomType
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(RoomType $roomType)
+    public function show($id)
     {
         //
     }
@@ -43,10 +43,10 @@ class RoomTypeController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\RoomType  $roomType
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, RoomType $roomType)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -54,10 +54,10 @@ class RoomTypeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\RoomType  $roomType
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(RoomType $roomType)
+    public function destroy($id)
     {
         //
     }

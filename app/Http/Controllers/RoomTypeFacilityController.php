@@ -31,10 +31,10 @@ class RoomTypeFacilityController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\RoomTypeFacility  $roomTypeFacility
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(RoomTypeFacility $roomTypeFacility)
+    public function show($id)
     {
         //
     }
@@ -43,10 +43,10 @@ class RoomTypeFacilityController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\RoomTypeFacility  $roomTypeFacility
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, RoomTypeFacility $roomTypeFacility)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -54,10 +54,10 @@ class RoomTypeFacilityController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\RoomTypeFacility  $roomTypeFacility
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(RoomTypeFacility $roomTypeFacility)
+    public function destroy($id)
     {
         //
     }

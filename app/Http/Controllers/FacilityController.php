@@ -31,10 +31,10 @@ class FacilityController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Facility  $facility
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Facility $facility)
+    public function show($id)
     {
         //
     }
@@ -43,10 +43,10 @@ class FacilityController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Facility  $facility
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Facility $facility)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -54,10 +54,10 @@ class FacilityController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Facility  $facility
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Facility $facility)
+    public function destroy($id)
     {
         //
     }

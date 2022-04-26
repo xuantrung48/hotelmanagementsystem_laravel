@@ -31,10 +31,10 @@ class BedTypeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\BedType  $bedType
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(BedType $bedType)
+    public function show($id)
     {
         //
     }
@@ -43,10 +43,10 @@ class BedTypeController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\BedType  $bedType
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, BedType $bedType)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -54,10 +54,10 @@ class BedTypeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\BedType  $bedType
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(BedType $bedType)
+    public function destroy($id)
     {
         //
     }

@@ -31,10 +31,10 @@ class FloorController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Floor  $floor
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Floor $floor)
+    public function show($id)
     {
         //
     }
@@ -43,10 +43,10 @@ class FloorController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Floor  $floor
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Floor $floor)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -54,10 +54,10 @@ class FloorController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Floor  $floor
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Floor $floor)
+    public function destroy($id)
     {
         //
     }
