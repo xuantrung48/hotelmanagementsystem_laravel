@@ -6,27 +6,28 @@ use App\Libs\DBaccessUtil;
 use Exception;
 
 /**
- * Store database transaction
+ * Destroy database transaction
  */
-class Store extends DBaccessUtil
+class Destroy extends DBaccessUtil
 {
     /**
      * Constructor to assign interface to variable
      * @param $model
-     * @param array $data
+     * @param int id
      */
-    public function __construct($model, $data)
+    public function __construct($model, $id)
     {
         $this->model = $model;
-        $this->data = $data;
+        $this->id = $id;
     }
+
     /*
 	 *call executeProcess method that already write database transaction
 	 */
     public function process()
     {
         try {
-            $this->model::insert($this->data);
+            $this->model::whereId($this->id)->delete();
             return ['status' => true, 'error' => ''];
         } catch (Exception $e) {
             return ['status' => false, 'error' => $e->getMessage()];
