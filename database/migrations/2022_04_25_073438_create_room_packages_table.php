@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\Days;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -16,7 +17,7 @@ class CreateRoomPackagesTable extends Migration
         Schema::create('room_packages', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
-            $table->enum('days', ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']);
+            $table->enum('days', [Days::Sunday, Days::Monday, Days::Tuesday, Days::Wednesday, Days::Thursday, Days::Friday, Days::Saturday])->default(Days::Sunday);
             $table->integer('min_nights');
             $table->integer('max_nights');
         });
